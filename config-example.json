@@ -1,0 +1,5 @@
+{
+  "wechatRedirectUrl": "http://yourdomain.com/wechat/oauth-callback",
+  "appId": "appId",
+  "appSecret": "appSecret"
+}
