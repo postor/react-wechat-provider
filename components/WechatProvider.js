@@ -17,6 +17,7 @@ class WechatProvider extends Component {
     isWxready: PropTypes.bool,
     isWechat: PropTypes.bool,
     onWxReady: PropTypes.func,
+    unbindWxReady: PropTypes.func,
     wx: PropTypes.any,
   }
 
@@ -36,10 +37,12 @@ class WechatProvider extends Component {
   getChildContext() {
     const { ready, isWechat } = this.state
     const onWxReady = (callback) => this.addOnReady(callback)
+    const unbindWxReady = (callback) => this.removeOnReady(callback)
     return {
       isWxready: ready,
       isWechat,
       onWxReady,
+      unbindWxReady,
       wx: this.wx,
     }
   }
@@ -69,6 +72,13 @@ class WechatProvider extends Component {
 
     if (ready) {
       callback(this.wx)
+    }
+  }
+
+  removeOnReady(callback) {
+    const index = this.readyListenners.indexOf(callback)
+    if (index >= 0) {
+      this.readyListenners.splice(index, 1)
     }
   }
 

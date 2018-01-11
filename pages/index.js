@@ -1,6 +1,7 @@
 import request from 'superagent'
 
 import WP from '../components/WechatProvider'
+import Example from '../components/Example'
 import config from '../config'
 
 
@@ -27,6 +28,7 @@ const getConfig = (cb) => {
           'onMenuShareQQ',
           'onMenuShareWeibo',
           'onMenuShareQZone',
+          'closeWindow',
         ],
       }
     }).then((c) => {
@@ -61,6 +63,6 @@ const success = (wx) => {
 export default () => (<div>
   <WP config={getConfig} success={success} error={(err) => alert('error')} debug={true}>
     <h1>test WechatProvider</h1>
-
+    <Example />
   </WP>
 </div>)
