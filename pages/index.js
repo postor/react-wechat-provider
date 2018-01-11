@@ -7,24 +7,26 @@ import config from '../config'
 const { appId } = config
 
 const getConfig = (cb) => {
-  if(typeof window == 'undefined'){
+  if (typeof window == 'undefined') {
     return
   }
-  
+
   const api = `/get-ticket`
+  const query = { url: location.href.split('#')[0] }
   request(api)
-  .query({url:location.href})
-  .then((data) => {
-    return {
-      ...data,
-      appId,
-      debug: true,
-    }
-  }).then((c) => {
-    cb(c)
-  }).catch((err) => {
-    console.log(err)
-  })
+    .query(query)
+    .then((res) => {
+      const data = JSON.parse(res.text)
+      return {
+        ...data,
+        appId,
+        debug: true,
+      }
+    }).then((c) => {
+      cb(c)
+    }).catch((err) => {
+      console.log(err)
+    })
 }
 
 export default () => (<div>
