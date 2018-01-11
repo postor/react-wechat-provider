@@ -62,7 +62,9 @@ const success = (wx) => {
 
 export default () => (<div>
   <WP config={getConfig} success={success} error={(err) => alert('error')} debug={true}>
-    <h1>test WechatProvider</h1>
-    <Example />
+    <div>
+      <h1>test WechatProvider</h1>
+      <Example />
+    </div>
   </WP>
 </div>)
