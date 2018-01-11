@@ -21,6 +21,13 @@ const getConfig = (cb) => {
         ...data,
         appId,
         debug: true,
+        jsApiList: [
+          'onMenuShareTimeline',
+          'onMenuShareAppMessage',
+          'onMenuShareQQ',
+          'onMenuShareWeibo',
+          'onMenuShareQZone',
+        ],
       }
     }).then((c) => {
       cb(c)
@@ -48,6 +55,7 @@ const success = (wx) => {
   wx.onMenuShareQQ(shareObj)
   wx.onMenuShareWeibo(shareObj)
   wx.onMenuShareQZone(shareObj)
+  alert('share configed')
 }
 
 export default () => (<div>
