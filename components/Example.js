@@ -11,7 +11,7 @@ class Example extends Component {
   }
 
   componentDidMount() {
-    const { onWxReady, unbindWxReady } = props
+    const { onWxReady, unbindWxReady } = this.props
     this.setState({
       info: 'onWxReady',
     })
