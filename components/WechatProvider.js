@@ -74,7 +74,8 @@ class WechatProvider extends Component {
 
   initWx(config) {
     const { success = () => { }, error = () => { }, debug = false } = this.props
-    const s = () => {
+    const s = ({ wx }) => {
+      this.wx = wx
       this.setState({
         ready: true,
       })
@@ -82,7 +83,7 @@ class WechatProvider extends Component {
       success(this.wx)
     }
 
-    this.wx = new WechatJSSDK({
+    new WechatJSSDK({
       ...config,
       success: s,
       error,
