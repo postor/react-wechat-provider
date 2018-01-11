@@ -23,7 +23,7 @@ class WechatProvider extends Component {
   constructor(props) {
     super(props)
 
-    const isWechat = true //typeof navigator != 'undefined' && /micromessenger/.test(navigator.userAgent.toLowerCase())
+    const isWechat = typeof navigator != 'undefined' && /micromessenger/.test(navigator.userAgent.toLowerCase())
     this.state = {
       ready: false,
       isWechat,

@@ -29,6 +29,27 @@ const getConfig = (cb) => {
     })
 }
 
+const success = (wx) => {
+  const shareObj = {
+    title: '测试标题',
+    desc: '测试描述',
+    link: location.href.split('#')[0], // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+    imgUrl: 'http://wx.qlogo.cn/mmhead/Q3auHgzwzM4R5KBEytrXC1fK8ibpcSSNmgJYs8Yib3icF3FXVLSA1dd6g/64',
+    success: () => {
+      alert('share success')
+    },
+    cancel: () => {
+      alert('share cancel')
+    }
+  }
+
+  wx.onMenuShareTimeline(shareObj)
+  wx.onMenuShareAppMessage(shareObj)
+  wx.onMenuShareQQ(shareObj)
+  wx.onMenuShareWeibo(shareObj)
+  wx.onMenuShareQZone(shareObj)
+}
+
 export default () => (<div>
   <WP config={getConfig} success={(wx) => alert('success')} error={(err) => alert('error')} debug={true}>
     <h1>test WechatProvider</h1>
