@@ -1,4 +1,4 @@
-import { Component, Children } from 'react'
+import React, { Component, Children } from 'react'
 import PropTypes from 'prop-types'
 import { isFunction } from 'lodash'
 import WechatJSSDK from './client'

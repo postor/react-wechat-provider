@@ -28,6 +28,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-wechat-provider": "^1.0.0",
     "superagent": "^3.8.2",
     "wechat-jssdk": "^3.0.11"
   },

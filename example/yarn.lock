@@ -5286,6 +5286,14 @@ react-proxy@^3.0.0-alpha.0:
   dependencies:
     lodash "^4.6.1"
 
+react-wechat-provider@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/react-wechat-provider/download/react-wechat-provider-1.0.0.tgz#3f5022673036bab3683128e61746ad6e3308618a"
+  dependencies:
+    lodash "^4.17.4"
+    prop-types "^15.6.0"
+    react "^16.2.0"
+
 react@^16.2.0:
   version "16.2.0"
   resolved "http://registry.npm.taobao.org/react/download/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
