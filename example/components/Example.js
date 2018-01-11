@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import connect from './wechat-connect'
+import { connect } from '../../dist'
 
 class Example extends Component {
   constructor(props) {

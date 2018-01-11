@@ -1,5 +1,3 @@
 /node_modules
-/config.json
-/.next
-/server-dist
-/wechat-info.json
+/dist
+/yarn-error.log

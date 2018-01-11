@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-import WP from '../components/WechatProvider'
+import { Provider as WP } from '../../dist'
 import Example from '../components/Example'
 import config from '../config'
 
