@@ -8,7 +8,7 @@
 import { Provider as WP } from 'react-wechat-provider'
 
 export default () => (<div>
-  <WP config={getConfig} success={success} error={(err) => alert('error')} debug={true}>
+  <WP config={getConfig} success={(wx)=>console.log(wx)} error={(err) => alert('error')} debug={true}>
     <div>
       <h1>test WechatProvider</h1>
       <Example />
