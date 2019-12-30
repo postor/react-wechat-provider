@@ -3,3 +3,4 @@
 /.next
 /server-dist
 /wechat-info.json
+yarn.lock
