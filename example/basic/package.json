@@ -1,0 +1,36 @@
+{
+  "name": "react-wechat-provider-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --experimental-modules --experimental-json-modules server/server.mjs",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postor/react-wechat-provider.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/postor/react-wechat-provider/issues"
+  },
+  "homepage": "https://github.com/postor/react-wechat-provider#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "next": "^9.5.2",
+    "next-routes": "^1.4.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-wechat-provider": "^1.0.3",
+    "superagent": "^6.0.0",
+    "wechat-jssdk": "^5.0.4"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.20.6"
+  }
+}

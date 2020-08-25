@@ -1,8 +1,7 @@
-import 'babel-polyfill'
 import express from 'express'
 import next from 'next'
-import getTicket from './get-ticket'
-import routes from './routes'
+import getTicket from './get-ticket.mjs'
+import routes from './routes.mjs'
 
 
 const port = parseInt(process.env.PORT, 10) || 3000
